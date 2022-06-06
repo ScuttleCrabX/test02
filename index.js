@@ -1,14 +1,13 @@
-function numberOneTriangle (n = 4) {
-    let a = " "
-    for (i = 1; i <= n; i++){
-        a += '* ';
-        console.log(a);
-    }
-    console.log("_______");
+let colorInput = document.querySelector('#color');
+let hexInput = document.querySelector('#hex');
+
+colorInput.addEventListener('input', () =>{
+    let color = colorInput.value;
+    hexInput.value = color;
+    document.querySelector('h1').style.color = color;
+});
+ChangeColor = () =>{
+    let getcolor = document.getElementById('hex').value;
+    document.body.style.background = getcolor;
+    document.getElementById('hex').value = '';
 }
-
-let stTriangle= numberOneTriangle()
-let ndTriangle= numberOneTriangle(2)
-
-console.log(stTriangle);
-console.log(ndTriangle);
